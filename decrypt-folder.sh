@@ -1,10 +1,15 @@
 #!/bin/bash
 
-# Encrypt a dir with age key-pair
-
 set -eux
 
-dir_encrypted="$1" # dirname.tar.gz.age
+dir_encrypted="$1"
+
+if [[ "$dir_encrypted" == *.tar.gz.age ]]; then
+    :
+else
+    echo "The directory name does not end with .tar.gz.age"
+    exit 1
+fi
 
 dir_zipped="${dir_encrypted%.age}" 
 
