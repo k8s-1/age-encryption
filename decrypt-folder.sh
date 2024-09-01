@@ -11,9 +11,9 @@ else
     exit 1
 fi
 
-dir_zipped="${dir_encrypted%.age}" 
+stat "./$dir_encrypted"
 
-stat "./$dir_encrypted" # verify dir exists
+dir_zipped="${dir_encrypted%.age}" 
 
 age --decrypt -i ~/.config/age/keys.txt -o "${dir_zipped}" "${dir_encrypted}"
 
