@@ -1,6 +1,6 @@
 # Age Encryption Convenience Scripts
 
-Scripts are self-explanatory, found in the root dir.
+Scripts are found in the root dir.
 
 ```
 .
