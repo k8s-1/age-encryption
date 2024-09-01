@@ -9,4 +9,3 @@ Scripts are found in the root dir.
 ├── generate-keypair.sh
 ...
 ```
-
