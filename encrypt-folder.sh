@@ -6,11 +6,10 @@ set -eux
 
 dir="$1"
 
+# remove trailing slash if exists
+dir="${dir%/}"
+
 stat "./$dir" # verify dir exists
-
-mkdir -p ~/.config/age
-
-age-keygen >> ~/.config/age/keys.txt
 
 pubkey=$(grep -oP '(?<=public key: ).*' ~/.config/age/keys.txt | tail -n 1)
 
