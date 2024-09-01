@@ -4,10 +4,9 @@ set -eux
 
 dir="$1"
 
-# remove trailing slash if exists
-dir="${dir%/}"
+dir="${dir%/}" # remove trailing slash if exists
 
-stat "./$dir" # verify dir exists
+stat "./$dir"
 
 pubkey=$(grep -oP '(?<=public key: ).*' ~/.config/age/keys.txt | tail -n 1)
 
