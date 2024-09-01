@@ -14,6 +14,8 @@ age-keygen >> ~/.config/age/keys.txt
 
 pubkey=$(grep -oP '(?<=public key: ).*' ~/.config/age/keys.txt | tail -n 1)
 
-tar cvz "./$dir" | age -r "$pubkey" --armor | tee "./$dir.tar.gz.age"
+dir_encrypted="$dir.tar.gz.age"
 
-echo "encryption complete of ./$dir to ./$dir.tar.gz.age... safe to remove ./$dir"
+tar cvz "./$dir" | age -r "$pubkey" --armor | tee "./$dir_encrypted"
+
+echo "encryption complete of ./$dir to ./$dir_encrypted... safe to remove ./$dir"
