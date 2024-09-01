@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Encrypt a dir with age key-pair
-
 set -eux
 
 dir="$1"
