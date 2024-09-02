@@ -1,0 +1,4 @@
+# .sops.yaml
+
+creation_rules:
+  - age: age129h70qwx39k7h5x6l9hg566nwm53527zvamre8vep9e3plsm44uqgy8gla,
