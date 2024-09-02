@@ -2,7 +2,8 @@
 #
 # creation rules are evaluated sequentially, the first match wins
 creation_rules:
-  - path_regex: \.dev\.yaml$
+  - path_regex: \.dev\.yaml$ # regex to match file paths to encrypt
+    encrypted_regex: '^(data|stringData)$' # regex to match specific keys in YAML
     age: >-
       age129h70qwx39k7h5x6l9hg566nwm53527zvamre8vep9e3plsm44uqgy8gla,
       age139h70qwx39k7h5x6l9hg566nwm53527zvamre8vep9e3plsm44uqgy8gla
